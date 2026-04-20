@@ -1,0 +1,45 @@
+# ============================================================
+# Atlas Lite — .gitignore
+# Repo público de distribución.
+# engram.exe NO se distribuye: el instalador lo descarga de
+#   https://github.com/Gentleman-Programming/engram/releases
+# ============================================================
+
+# === Entorno y runtime ===
+.env
+.venv/
+.atlas/
+__pycache__/
+*.pyc
+*.pyo
+
+# === Binario Engram — descargado por el instalador ===
+engram.exe
+
+# === Engram DB ===
+.engram/
+
+# === Binarios fuente ===
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+
+# === Imágenes ===
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# === Temporales ===
+_temp_*
+~$*
+
+# === OS ===
+Thumbs.db
+desktop.ini
+.DS_Store

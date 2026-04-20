@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "brand": "Atlas Lite",
+  "purpose": "Two-tier skill model for non-programmer-first orchestration.",
+  "basic_skills": {
+    "sdd": [
+      "sdd-init",
+      "sdd-explore",
+      "sdd-propose",
+      "sdd-spec",
+      "sdd-design",
+      "sdd-tasks",
+      "sdd-apply",
+      "sdd-verify",
+      "sdd-archive"
+    ],
+    "data_engineering": [
+      "data-eng-source-cartographer",
+      "data-eng-etl-extractor",
+      "data-eng-etl-transformer",
+      "data-eng-quality-validator",
+      "data-eng-pipeline-orchestrator"
+    ],
+    "data_science": [
+      "data-sci-feature-engineer",
+      "data-sci-classic-ml-trainer",
+      "data-sci-model-evaluator"
+    ],
+    "business_intelligence": [
+      "data-an-sql-querier",
+      "data-an-metric-definer",
+      "data-an-bi-coder",
+      "data-an-storyteller"
+    ]
+  },
+  "extended_families": [
+    "core-*",
+    "qa-*",
+    "qa-docs-*",
+    "script-*",
+    "ops-*",
+    "ux-*",
+    "ui-*",
+    "devops-*",
+    "sec-*",
+    "legal-*",
+    "cfo-*",
+    "hr-*",
+    "archive-*",
+    "lang-*",
+    "genai-*",
+    "fact-*",
+    "math-*",
+    "agro-*",
+    "mep-*",
+    "struct-*",
+    "ind-*",
+    "health-*",
+    "fun-*",
+    "osint-*",
+    "ethics-*",
+    "sci-*",
+    "arch-*",
+    "mkt-*",
+    "pres-*",
+    "data-eng-*",
+    "data-sci-*",
+    "data-an-*",
+    "acc-*"
+  ],
+  "accounting_family": {
+    "description": "Skills para contabilidad financiera bajo el PGC español. Tres capas: proceso, dominio y análisis.",
+    "project": "Contabilidad",
+    "sprint_1": {
+      "status": "active",
+      "skills": [
+        "acc-problem-decomposer",
+        "acc-entry-designer"
+      ]
+    },
+    "sprint_2": {
+      "status": "active",
+      "skills": [
+        "acc-pgc-interpreter",
+        "acc-arrendamientos"
+      ]
+    },
+    "sprint_3": {
+      "status": "active",
+      "skills": [
+        "acc-financial-kpi-definer"
+      ]
+    },
+    "sprint_4": {
+      "status": "active",
+      "skills": [
+        "acc-iva-calculator",
+        "acc-inmovilizado-material",
+        "acc-inmovilizado-intangible",
+        "acc-existencias",
+        "acc-activos-financieros",
+        "acc-impuesto-sociedades",
+        "acc-subvenciones",
+        "acc-cuentas-anuales"
+      ]
+    },
+    "sprint_5": {
+      "status": "active",
+      "skills": [
+        "acc-chart-mapper"
+      ]
+    }
+  }
+}
