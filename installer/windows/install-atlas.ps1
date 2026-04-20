@@ -28,8 +28,15 @@ if (-not (Test-Path $engramDest)) {
     if (-not $asset) { throw "Could not find windows_amd64 asset in latest engram release." }
     $zip = Join-Path $env:TEMP "engram.zip"
     Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip
-    Expand-Archive $zip -DestinationPath $WorkspacePath -Force
-    Remove-Item $zip
+    # Extract ONLY engram.exe — the zip also contains CHANGELOG.md, LICENSE, README.md
+    # which would overwrite Atlas files if we extracted everything.
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+    $zipFile = [System.IO.Compression.ZipFile]::OpenRead($zip)
+    $entry = $zipFile.Entries | Where-Object { $_.Name -eq "engram.exe" } | Select-Object -First 1
+    if (-not $entry) { $zipFile.Dispose(); throw "engram.exe not found inside zip." }
+    [System.IO.Compression.ZipFileExtensions]::ExtractToFile($entry, $engramDest, $true)
+    $zipFile.Dispose()
+    Remove-Item $zip -Force
     Write-Step "engram.exe downloaded: $($release.tag_name)"
 }
 # ---------------------------------------------------------------------------
